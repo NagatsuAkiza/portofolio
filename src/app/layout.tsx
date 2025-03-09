@@ -3,6 +3,7 @@ import localFont from "next/font/local";
 import "./globals.css";
 import { InteractiveGridPattern } from "@/components/magicui/interactive-grid-pattern";
 import { cn } from "@/lib/utils";
+import { Analytics } from "@vercel/analytics/react";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -38,6 +39,7 @@ export default function RootLayout({
           squares={[80, 80]}
           squaresClassName="hover:fill-secondary/20"
         />
+        <Analytics />
         {children}
       </body>
     </html>
